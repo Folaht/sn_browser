@@ -1,5 +1,5 @@
 import EventEmitter from 'events';
-import { XorUrlEncoder } from 'safe-nodejs';
+import { XorUrlEncoder } from 'sn_nodejs';
 
 import { SaferSafe } from '$Extensions/safe/webviewProcess/saferSafe';
 // eslint-disable-next-line import/extensions
@@ -63,7 +63,7 @@ export const setupWebIdEventEmitter = ( passedStore, win = window ) => {
             %cThe webIdEventEmitter is still an experimental API.
             It may be deprecated or change in future.
 
-            For updates or to submit ideas and suggestions, visit https://github.com/maidsafe/safe_browser`,
+            For updates or to submit ideas and suggestions, visit https://github.com/maidsafe/sn_browser`,
             'font-weight: bold',
             'font-weight: normal'
         );

@@ -2,7 +2,7 @@
 
 ## Notes!
 
-The Safe Browser is actively being developed against various iterations of The Safe Network. Both of which are still considered alpha software, so please be prepared to encounter and [report bugs](https://github.com/maidsafe/safe-browser/issues/new)!
+The Safe Browser is actively being developed against various iterations of The Safe Network. Both of which are still considered alpha software, so please be prepared to encounter and [report bugs](https://github.com/maidsafe/sn_browser/issues/new)!
 
 You currently (need the `Safe Authenticator` to be installed.)[https://github.com/maidsafe/safe-api#the-authenticator-daemon].
 
@@ -96,13 +96,13 @@ A packaged application, built in a `NODE_ENV=dev`, can access either `prod` or `
 
 ##### linux
 
-On Linux, the packaged application gets generated as a `Shared Library` file and hence cannot be run by double-clicking the executable. This is due to an issue with `electron-builder`( https://github.com/electron-userland/electron-builder/issues/3950 ). But the application can be run through the terminal. You can run the browser by running `./safe-browser`.
+On Linux, the packaged application gets generated as a `Shared Library` file and hence cannot be run by double-clicking the executable. This is due to an issue with `electron-builder`( https://github.com/electron-userland/electron-builder/issues/3950 ). But the application can be run through the terminal. You can run the browser by running `./sn_browser`.
 
 ##### macOS
 
 On macOS, the application should be located in the 'Applications' for [security reasons](https://github.com/potionfactory/LetsMove/issues/56). By default the packaged application will prompt to move the application. To override this, you can pass `--ignoreAppLocation`:
 
-`open release/safe-browser-<version>-mac-x64/SAFE\ Browser.app --args --ignoreAppLocation`
+`open release/sn_browser-<version>-mac-x64/SAFE\ Browser.app --args --ignoreAppLocation`
 
 #### Development commands
 
@@ -140,7 +140,7 @@ Logs are printed to both render console and stdout. Logs are also written to a l
 
 `electron-log`is used under the hood, and ouputs logs to:
 
-- on Linux: ~/.config/safe-browser/logs/{process type}.log
+- on Linux: ~/.config/sn_browser/logs/{process type}.log
 - on macOS: ~/Library/Logs/Safe Browser/{process type}.log
 - on Windows: %USERPROFILE%\AppData\Roaming\Safe Browser\logs\{process type}.log
 

@@ -1,6 +1,6 @@
 {
-  "name": "safe-browser",
-  "identifier": "net.maidsafe.safe-browser",
+  "name": "sn_browser",
+  "identifier": "net.maidsafe.sn_browser",
   "productName": "SAFE Browser",
   "version": "0.18.0",
   "vendor": "MaidSafe.net Ltd",
@@ -16,7 +16,6 @@
     "bump": "git fetch upstream --tags -f || git fetch --tags -f; git tag -d $(git tag -l | grep alpha ); git tag -d $(git tag -l | grep beta ); standard-version -a",
     "check-types": "tsc",
     "prod-dev": "cross-env START_HOT=1 node -r babel-register-ts ./internals/scripts/CheckPortInUse.ts && cross-env NODE_ENV=production START_HOT=1 yarn start-renderer-dev",
-    "dev": "yarn mock-dev",
     "lint": "cross-env NODE_ENV=development eslint --cache --format=pretty --ext .js,.jsx,.ts,.tsx .",
     "lint-fix": "yarn --silent lint --fix; exit 0",
     "lint-styles": "stylelint --ignore-path .eslintignore '**/*.*(css|scss)' --syntax scss",
@@ -24,7 +23,6 @@
     "log-mac": "tail -f ~/Library/Logs/SAFE\\ Browser/*.log",
     "log-linux": "tail -f ~/.config/SAFE\\ Browser/logs/*.log",
     "log-win": "tail -f ~/%USERPROFILE%\\AppData\\Roaming\\SAFE\\ Browser\\logs*.log",
-    "mock-dev": "cross-env START_HOT=1 node -r babel-register-ts ./internals/scripts/CheckPortInUse.ts && cross-env NODE_ENV=development START_HOT=1 yarn start-renderer-dev",
     "prelint-fix": "prettier --ignore-path .eslintignore --single-quote --write '**/*.{*{js,ts,tsx,jsx,json},babelrc,eslintrc,prettierrc,stylelintrc}'",
     "prerelease": "standard-version --prerelease rc",
     "package": "cross-env PACKAGING=true yarn build && electron-builder build --config ./builderConfig.js --publish never",
@@ -285,7 +283,7 @@
     "redux-promise": "0.6.0",
     "redux-promise-middleware": "6.1.2",
     "redux-thunk": "^2.3.0",
-    "safe-nodejs": "https://github.com/maidsafe/safe-nodejs.git#0.11.7",
+    "sn_nodejs": "https://github.com/maidsafe/sn_nodejs.git#v0.11.13",
     "source-map-support": "^0.5.19"
   },
   "devEngines": {
